@@ -1,9 +1,6 @@
 from copy import deepcopy
 
-from basicsr.utils import get_root_logger
-from basicsr.utils.registry import LOSS_REGISTRY
-
-from .losses import (
+from codeformer.basicsr.losses.losses import (
     CharbonnierLoss,
     GANLoss,
     L1Loss,
@@ -14,6 +11,8 @@ from .losses import (
     gradient_penalty_loss,
     r1_penalty,
 )
+from codeformer.basicsr.utils import get_root_logger
+from codeformer.basicsr.utils.registry import LOSS_REGISTRY
 
 __all__ = [
     "L1Loss",

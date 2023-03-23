@@ -2,12 +2,12 @@ import os
 from copy import deepcopy
 
 import torch
-from facelib.detection.yolov5face.models.common import Conv
-from facelib.utils import download_pretrained_models, load_file_from_url
+from codeformer.facelib.detection.yolov5face.models.common import Conv
+from codeformer.facelib.utils import download_pretrained_models, load_file_from_url
 from torch import nn
 
-from .retinaface.retinaface import RetinaFace
-from .yolov5face.face_detector import YoloDetector
+from codeformer.facelib.detection.retinaface.retinaface import RetinaFace
+from codeformer.facelib.detection.yolov5face.face_detector import YoloDetector
 
 
 def init_detection_model(model_name, half=False, device="cuda"):

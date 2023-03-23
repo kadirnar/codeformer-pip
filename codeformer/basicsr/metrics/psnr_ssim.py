@@ -1,7 +1,8 @@
 import cv2
 import numpy as np
-from basicsr.metrics.metric_util import reorder_image, to_y_channel
-from basicsr.utils.registry import METRIC_REGISTRY
+
+from codeformer.basicsr.metrics.metric_util import reorder_image, to_y_channel
+from codeformer.basicsr.utils.registry import METRIC_REGISTRY
 
 
 @METRIC_REGISTRY.register()

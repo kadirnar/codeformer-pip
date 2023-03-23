@@ -1,8 +1,8 @@
 import torch
-from facelib.utils import load_file_from_url
 
-from .bisenet import BiSeNet
-from .parsenet import ParseNet
+from codeformer.facelib.parsing.bisenet import BiSeNet
+from codeformer.facelib.parsing.parsenet import ParseNet
+from codeformer.facelib.utils import load_file_from_url
 
 
 def init_parsing_model(model_name="bisenet", half=False, device="cuda"):

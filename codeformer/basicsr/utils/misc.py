@@ -7,8 +7,8 @@ from os import path as osp
 import numpy as np
 import torch
 
-from .dist_util import master_only
-from .logger import get_root_logger
+from codeformer.basicsr.utils.dist_util import master_only
+from codeformer.basicsr.utils.logger import get_root_logger
 
 IS_HIGH_VERSION = [
     int(m)

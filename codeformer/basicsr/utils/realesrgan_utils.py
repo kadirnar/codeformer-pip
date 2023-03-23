@@ -6,9 +6,10 @@ import threading
 import cv2
 import numpy as np
 import torch
-from basicsr.utils.download_util import load_file_from_url
-from basicsr.utils.misc import get_device
 from torch.nn import functional as F
+
+from codeformer.basicsr.utils.download_util import load_file_from_url
+from codeformer.basicsr.utils.misc import get_device
 
 # ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

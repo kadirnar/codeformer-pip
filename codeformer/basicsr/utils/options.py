@@ -3,7 +3,8 @@ from collections import OrderedDict
 from os import path as osp
 
 import yaml
-from basicsr.utils.misc import get_time_str
+
+from codeformer.basicsr.utils.misc import get_time_str
 
 
 def ordered_yaml():

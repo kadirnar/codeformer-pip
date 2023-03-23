@@ -3,9 +3,12 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from basicsr.utils.misc import get_device
-from facelib.detection.align_trans import get_reference_facial_points, warp_and_crop_face
-from facelib.detection.retinaface.retinaface_net import (
+from PIL import Image
+from torchvision.models._utils import IntermediateLayerGetter as IntermediateLayerGetter
+
+from codeformer.basicsr.utils.misc import get_device
+from codeformer.facelib.detection.align_trans import get_reference_facial_points, warp_and_crop_face
+from codeformer.facelib.detection.retinaface.retinaface_net import (
     FPN,
     SSH,
     MobileNetV1,
@@ -13,7 +16,7 @@ from facelib.detection.retinaface.retinaface_net import (
     make_class_head,
     make_landmark_head,
 )
-from facelib.detection.retinaface.retinaface_utils import (
+from codeformer.facelib.detection.retinaface.retinaface_utils import (
     PriorBox,
     batched_decode,
     batched_decode_landm,
@@ -21,8 +24,6 @@ from facelib.detection.retinaface.retinaface_utils import (
     decode_landm,
     py_cpu_nms,
 )
-from PIL import Image
-from torchvision.models._utils import IntermediateLayerGetter as IntermediateLayerGetter
 
 # device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 device = get_device()

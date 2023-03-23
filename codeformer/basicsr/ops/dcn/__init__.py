@@ -1,4 +1,4 @@
-from .deform_conv import (
+from codeformer.basicsr.ops.dcn.deform_conv import (
     DeformConv,
     DeformConvPack,
     ModulatedDeformConv,

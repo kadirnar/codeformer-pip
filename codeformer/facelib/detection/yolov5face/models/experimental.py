@@ -2,8 +2,9 @@
 
 import numpy as np
 import torch
-from facelib.detection.yolov5face.models.common import Conv
 from torch import nn
+
+from codeformer.facelib.detection.yolov5face.models.common import Conv
 
 
 class CrossConv(nn.Module):

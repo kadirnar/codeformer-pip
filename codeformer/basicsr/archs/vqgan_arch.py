@@ -9,8 +9,9 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from basicsr.utils import get_root_logger
-from basicsr.utils.registry import ARCH_REGISTRY
+
+from codeformer.basicsr.utils import get_root_logger
+from codeformer.basicsr.utils.registry import ARCH_REGISTRY
 
 
 def normalize(in_channels):

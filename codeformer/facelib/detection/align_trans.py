@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-from .matlab_cp2tform import get_similarity_transform_for_cv2
+from codeformer.facelib.detection.matlab_cp2tform import get_similarity_transform_for_cv2
 
 # reference facial points, a list of coordinates (x,y)
 REFERENCE_FACIAL_POINTS = [

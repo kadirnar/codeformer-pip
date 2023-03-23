@@ -4,10 +4,11 @@ from typing import List, Optional
 import numpy as np
 import torch
 import torch.nn.functional as F
-from basicsr.archs.vqgan_arch import *
-from basicsr.utils import get_root_logger
-from basicsr.utils.registry import ARCH_REGISTRY
 from torch import Tensor, nn
+
+from codeformer.basicsr.archs.vqgan_arch import *
+from codeformer.basicsr.utils import get_root_logger
+from codeformer.basicsr.utils.registry import ARCH_REGISTRY
 
 
 def calc_mean_std(feat, eps=1e-5):

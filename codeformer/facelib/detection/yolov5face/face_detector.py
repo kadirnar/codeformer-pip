@@ -5,9 +5,10 @@ from pathlib import Path
 import cv2
 import numpy as np
 import torch
-from facelib.detection.yolov5face.models.yolo import Model
-from facelib.detection.yolov5face.utils.datasets import letterbox
-from facelib.detection.yolov5face.utils.general import (
+
+from codeformer.facelib.detection.yolov5face.models.yolo import Model
+from codeformer.facelib.detection.yolov5face.utils.datasets import letterbox
+from codeformer.facelib.detection.yolov5face.utils.general import (
     check_img_size,
     non_max_suppression_face,
     scale_coords,

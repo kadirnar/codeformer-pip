@@ -4,9 +4,15 @@ import math
 
 import numpy as np
 import torch
-from facelib.detection.yolov5face.utils.datasets import letterbox
-from facelib.detection.yolov5face.utils.general import make_divisible, non_max_suppression, scale_coords, xyxy2xywh
 from torch import nn
+
+from codeformer.facelib.detection.yolov5face.utils.datasets import letterbox
+from codeformer.facelib.detection.yolov5face.utils.general import (
+    make_divisible,
+    non_max_suppression,
+    scale_coords,
+    xyxy2xywh,
+)
 
 
 def autopad(k, p=None):  # kernel, padding

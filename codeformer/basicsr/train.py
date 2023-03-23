@@ -9,11 +9,12 @@ import warnings
 from os import path as osp
 
 import torch
-from basicsr.data import build_dataloader, build_dataset
-from basicsr.data.data_sampler import EnlargedSampler
-from basicsr.data.prefetch_dataloader import CPUPrefetcher, CUDAPrefetcher
-from basicsr.models import build_model
-from basicsr.utils import (
+
+from codeformer.basicsr.data import build_dataloader, build_dataset
+from codeformer.basicsr.data.data_sampler import EnlargedSampler
+from codeformer.basicsr.data.prefetch_dataloader import CPUPrefetcher, CUDAPrefetcher
+from codeformer.basicsr.models import build_model
+from codeformer.basicsr.utils import (
     MessageLogger,
     check_resume,
     get_env_info,
@@ -24,8 +25,8 @@ from basicsr.utils import (
     mkdir_and_rename,
     set_random_seed,
 )
-from basicsr.utils.dist_util import get_dist_info, init_dist
-from basicsr.utils.options import dict2str, parse
+from codeformer.basicsr.utils.dist_util import get_dist_info, init_dist
+from codeformer.basicsr.utils.options import dict2str, parse
 
 # ignore UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`.
 warnings.filterwarnings("ignore", category=UserWarning)

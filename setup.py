@@ -33,7 +33,7 @@ _DEV_REQUIREMENTS = [
 
 
 setuptools.setup(
-    name="codeformer-app",
+    name="codeformer-pip",
     version=get_version(),
     author="kadirnar",
     license="S-Lab",

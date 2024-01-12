@@ -91,9 +91,9 @@ def inference_app(image, background_enhance, face_upsample, upscale, codeformer_
     draw_box = False
     detection_model = "retinaface_resnet50"
     print("Inp:", type(image), background_enhance, face_upsample, upscale, codeformer_fidelity)
-    if type(image) == str:
+    if isinstance(input_data, str):
         img = cv2.imread(str(image), cv2.IMREAD_COLOR)
-    if type(image) ==  numpy.ndarray:
+    if isinstance(input_data, np.ndarray):
         img = image
     print("\timage size:", img.shape)
 

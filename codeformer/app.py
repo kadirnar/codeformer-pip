@@ -1,5 +1,5 @@
 import os
-
+import numpy as np
 import cv2
 import torch
 from torchvision.transforms.functional import normalize
@@ -90,9 +90,11 @@ def inference_app(image, background_enhance, face_upsample, upscale, codeformer_
     only_center_face = False
     draw_box = False
     detection_model = "retinaface_resnet50"
-    print("Inp:", image, background_enhance, face_upsample, upscale, codeformer_fidelity)
-
-    img = cv2.imread(str(image), cv2.IMREAD_COLOR)
+    print("Inp:", type(image), background_enhance, face_upsample, upscale, codeformer_fidelity)
+    if isinstance(image, str):
+        img = cv2.imread(str(image), cv2.IMREAD_COLOR)
+    if isinstance(image, np.ndarray):
+        img = image
     print("\timage size:", img.shape)
 
     upscale = int(upscale)  # convert type to int
@@ -172,8 +174,5 @@ def inference_app(image, background_enhance, face_upsample, upscale, codeformer_
             )
         else:
             restored_img = face_helper.paste_faces_to_input_image(upsample_img=bg_img, draw_box=draw_box)
-
-    # save restored img
-    save_path = f"output/out.png"
-    imwrite(restored_img, str(save_path))
-    return save_path
+            
+    return restored_img
